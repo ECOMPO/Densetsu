@@ -1,0 +1,352 @@
+/* CSS Document */
+
+*{padding:0;margin:0;}
+body{
+ background:url(imagens/back.jpg);
+ text-align:center;
+}
+#wrap{
+ background:#FFF;
+ width:100%;
+ text-align:left;
+ margin:0 auto;
+} 
+/*inc_topo*/ 
+ 
+
+#topo{
+ clear:both;
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ width:100%;
+ height:19px;
+ background-image: url(imagens/topo.png);
+ background-repeat:no-repeat;
+ background-position:center;
+ }
+ 
+#divtopo {
+ width: 1000px;
+ height: 120px;
+ vertical-align: top;
+ text-align:center;
+ }
+ 
+ #divmenu {
+ width: 100%;
+ height: 55px;
+ vertical-align: top;
+ text-align:center;
+ background-image: url(imagens/bg_menu.png);
+ background-repeat:no-repeat;
+ background-position:center;;
+ }
+ 
+
+ 
+  #divbuscar {
+ width: 100%;
+ height: 55px;
+ vertical-align: top;
+ text-align:center;
+ background-image: url(imagens/bg_buscar.png);
+ background-repeat:no-repeat;
+ background-position:center;
+ }
+
+ 
+ #divleft { 
+ text-align: left;
+ width:40%;
+ display:inline-block;
+ float: left;
+ }
+ 
+ #divright { 
+ text-align: right;
+ width:60%;
+ display:inline-block;
+ float: right;
+ } 
+ 
+
+#banner{
+ clear:both;
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ width:100%;
+ height:354px;
+ background-image: url(imagens/back_banner.jpg);
+ background-repeat:no-repeat;
+ background-position:center;
+ }
+ 
+ #divbanner {
+ width: 1000px;
+ height: 247px;
+ vertical-align: top;
+ text-align:center;
+ }
+ 
+ #divdefault {
+ width: 1000px;
+ height: 300px;
+ vertical-align: top;
+ text-align:center;
+ }
+ 
+#menu{
+    clear:both;
+ width:1000px;
+ height:57px;
+ background:url(imagens/back_menu.png)
+}
+
+#meio{
+ width:1000px;
+ margin-left:auto;
+ margin-right:auto;
+}
+/* css do rodapé */
+
+  #divmenurodape {
+ width: 100%;
+ height: 60px;
+ vertical-align: top;
+ text-align:center;
+ background-image: url(imagens/bg_menurodape.png);
+ background-repeat:no-repeat;
+ background-position:center;
+ }
+ 
+ /* menu do rodapé */
+ #divcenter { 
+ text-align: center;
+ width:80%;
+ display:inline-block;
+ float: center;
+ }
+#rodapeb{
+ clear:both;
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ width:100%;
+ height:113px;
+ background-image: url(imagens/back_rodape.png);
+ background-repeat:no-repeat;
+ background-position:center;
+ }
+ 
+ 
+ #divleft_rodape { 
+ text-align: left;
+ width:30%;
+ display:inline-block;
+ float: left;
+ }
+ 
+ #divright_rodape { 
+ text-align: right;
+ width:30%;
+ display:inline-block;
+ float: right;
+ } 
+#divcenterb { 
+ text-align: right;
+ width:30%;
+ display:inline-block;
+ float: right;
+ } 
+#divcenter_rodape{ 
+ text-align: center;
+ width:100%;
+ display:inline-block;
+ float: center;
+ }
+
+ 
+
+ 
+
+/*-----------------*/
+
+#divclear{
+ clear:both;
+}
+
+/* h1 inscricoes*/
+
+h1 {
+ color:#2978ba;
+ FONT-FAMILY: Helvetica LT Condensed, arial, verdana, calibri;
+ font-weight:normal;
+ font-size:30px;
+}
+
+h1 a {color:#2978ba; text-decoration:none;}
+
+/* h2 do titulo dentro do frame*/
+h2 {
+ color:#d35604;
+ FONT-FAMILY: Helvetica LT, arial, Calibri, verdana;
+ font-weight:normal;
+ font-size:24px;
+}
+
+h2 a {color:#f1e9e1; text-decoration:none;}
+
+h3 {
+ color:#3b5997;
+ FONT-FAMILY: Helvetica LT, arial, Calibri, verdana;
+ font-weight:normal;
+ font-size:24px;
+}
+
+h3 a {color:#f1e9e1; text-decoration:none;}
+
+ 
+
+/* fontte do top*/
+.Fonte01
+{
+ COLOR: #9b9b9b;
+ FONT-FAMILY:  Calibri, arial,verdana;
+ FONT-SIZE: 14px;
+ TEXT-DECORATION: none;
+}
+
+.Fonte01b
+{
+ COLOR: #ed3237;
+ FONT-FAMILY:  Calibri, arial,verdana;
+ FONT-SIZE: 14px;
+ TEXT-DECORATION: none;
+}
+
+/* fonte do menu */
+.Fonte02
+{
+ COLOR: #ffffff;
+ FONT-FAMILY: Calibri, arial,verdana;
+ FONT-SIZE: 18px;
+ TEXT-DECORATION: none;
+}
+/* fonte do ropade */
+.Fonte02B
+{
+ COLOR: #626262;
+ FONT-FAMILY: arial,Calibri,verdana;
+ FONT-SIZE: 12px;
+ TEXT-DECORATION: none;
+}
+
+/* fonte do rodape */
+.Fonte03
+{
+ COLOR: #ffffff;
+ FONT-FAMILY:  arial, verdana;
+ FONT-SIZE: 15px;
+ TEXT-DECORATION: none;
+
+}
+
+/* fonte do rodapé */
+.Fonte04
+{
+ COLOR: #272876;
+ FONT-FAMILY:  Calibri,arial, verdana;
+ FONT-SIZE: 20px;
+ TEXT-DECORATION: none;
+}
+
+/* fonte dos textos*/
+.Fonte05
+{
+ COLOR: #ed3237;
+ FONT-FAMILY:  arial, Calibri, verdana;
+ FONT-SIZE: 14px;
+ TEXT-DECORATION: none;
+}
+/* fonte dos nomes dos produtos */
+.Fonte06
+{
+ COLOR: #888888;
+ FONT-FAMILY:  arial, Calibri, verdana;
+ FONT-SIZE: 14px;
+ TEXT-DECORATION: none;
+}
+.Fonte06B
+{
+ COLOR: #5c5c5c;
+ FONT-FAMILY:  arial, Calibri, verdana;
+ FONT-SIZE: 14px;
+ TEXT-DECORATION: none;
+}
+
+/* fontes do texto rodape*/
+.Fonte07
+{
+ COLOR: #282976;
+ FONT-FAMILY:  arial, Calibri, verdana;
+ FONT-SIZE: 12px;
+ TEXT-DECORATION: none;
+}
+
+.Fonte07b
+{
+ COLOR: #2978ba;
+ FONT-FAMILY:  arial,Calibri, verdana;
+ FONT-SIZE: 12px;
+ TEXT-DECORATION: none;
+}
+
+.Fonte08
+/* fonte dos numeros */
+{
+ COLOR: #213d61;
+ FONT-FAMILY: Helvetica LT Condensed, arial, verdana;
+ FONT-SIZE: 80px;
+ TEXT-DECORATION: none;
+}
+
+ 
+
+ 
+
+.Fonte13
+{
+ COLOR: #939598;
+ FONT-FAMILY: Trebuchet MS, arial;
+ FONT-SIZE: 14px;
+ TEXT-DECORATION: none;
+}
+
+ 
+
+.Fonte20
+{
+ COLOR: #f37021;
+ FONT-FAMILY: Trebuchet MS, arial;
+ FONT-SIZE: 20px;
+ TEXT-DECORATION: none;
+ 
+}
+
+ 
+
+ 
+
+.Campo{ FONT-FAMILY:verdana; FONT-SIZE:12px; BACKGROUND-COLOR:#5e5e5e; }
+
+.CampoHome{ BORDER:None;PADDING-LEFT:3px;PADDING-TOP:3px;PADDING-RIGHT:3px;FONT-FAMILY:verdana;FONT-SIZE:12px; color:#5e5e5e;}
+
+.Botao{ FONT-FAMILY:verdana; FONT-SIZE:09px; BACKGROUND-COLOR:#646467; }
+
+.Text { COLOR:#5e5e5e; FONT-FAMILY: verdana, Helvetica, sans-serif; FONT-SIZE:12px; TEXT-DECORATION: None;
+}

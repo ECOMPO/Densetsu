@@ -37,7 +37,7 @@ if($campos != 0) {
 			$_SESSION['senha_usuario'] = $senha;
 			
 			// redireciona o link para uma outra pagina
-			header("Location: Usuario/dados_usuario.php");
+			header("Location: acessorios.php");
 		}
 	}
 } else {

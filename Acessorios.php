@@ -1,3 +1,24 @@
+<?php
+session_start();
+// verifica se a variavel existir
+if(isset($_SESSION['login_usuario']) and isset($_SESSION['senha_usuario'])) {
+	// se existie as sessões coloca os valores em uma varivel
+	$login_usuario = $_SESSION['login_usuario'];
+	$senha_usuario = $_SESSION['senha_usuario'];
+} else {
+	$erro = urlencode("Você não esta logado!");
+	header("Location:index.php");
+	exit;
+}
+
+
+//include "validar_session.php";
+
+include "Config/config_sistema.php";
+
+// faz consulta no banco
+$consulta = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
+?>
 
 <center>
 <title>Densetsu</title>
@@ -62,9 +83,9 @@
 include "inc_topo.php";
 
 ?>
-</center> 
+</head></center> 
 
-</head>
+
 <body background=""></div></div>
 <table width="1000">
   <tr>
@@ -110,7 +131,14 @@ include "inc_topo.php";
         </tr>
         <tr>
           <td height="23"></td>
-          <td valign="middle"><a href="cadastro.php" class="style3"></a></td>
+          <td valign="middle"><a href="cadastro.php" class="style3"> </a><?php
+while($linha = mysql_fetch_object($consulta)) {
+	echo "<b>Olá ".$linha->Login."!</b>";
+}
+?>
+<br>
+<a href="logout.php" class="style3">Logout</a>
+ </td>
           <td>&nbsp;</td>
           <td colspan="2" valign="middle"><a href="Senha/lembrar_senha.php" class="style3"></a> </td>
         </tr>
@@ -166,7 +194,9 @@ include "inc_topo.php";
             </div></td>
           </tr>
         </table>
-    </div></td>
+        <a href="cadastro.php" class="style3">
+
+      </a></div></td>
   </tr>
 </table>
 <table width="1000" border="0">

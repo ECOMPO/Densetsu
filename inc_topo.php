@@ -40,7 +40,9 @@ body {
 	});
 </script>
 
-<img src="images/banner03.png"width="1000" height="143" alt="" />
+<img src="images/banner03.png" alt=""width="1000" height="143" border="0" usemap="#Map" />
+<map name="Map"><area shape="rect" coords="4,4,177,140" href="index.php">
+</map>
 
 
 

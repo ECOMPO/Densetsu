@@ -60,7 +60,7 @@ include "inc_topo.php";
 </head></center> 
 
 
-<body background=""></div></div>
+<body ></div></div>
 <table width="1000">
   <tr>
     <td width="182"><img src="images/bt_login.jpg" alt="" width="160" height="35" /></td>
@@ -79,7 +79,7 @@ include "inc_topo.php";
         <tr>
           <td height="82">&nbsp;</td>
           <td colspan="6" valign="top"><div align="left"><span class="style3">Usu&aacute;rio: </span>
-            <input name="login" type="text" id="login" maxlength="200" />
+              <input name="login" type="text" id="login" maxlength="200" />
                 <span class="style3">Senha:                </span>
                 <input name="senha" type="password" id="label" maxlength="15" />
           </div></td>
@@ -105,7 +105,8 @@ include "inc_topo.php";
         </tr>
         <tr>
           <td height="23"></td>
-          <td valign="middle"><a href="cadastro.php" class="style3"></a></td>
+          <td valign="middle"><a href="cadastro.php" class="style3"><br>
+</a></td>
           <td>&nbsp;</td>
           <td colspan="2" valign="middle"><a href="Senha/lembrar_senha.php" class="style3"></a> </td>
         </tr>
@@ -238,7 +239,7 @@ print "<img src= '/site_geek/images/prop{$i}.jpg' />";
 <table width="1000" height="113" border="0">
   <tr>
     <td valign="top" background="images/rodape.jpg"><div align="left"><img src="images/formas_pag.png" width="805" height="66">
-      <table width="100%" border="0">
+        <table width="100%" border="0">
         <tr>
           <td><div align="center" class="style3"> Copyright &copy; 2012 Geek Sistemas </div></td>
         </tr>
