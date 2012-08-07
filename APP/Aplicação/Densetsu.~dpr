@@ -1,0 +1,15 @@
+program Densetsu;
+
+uses
+  Forms,
+  Unit_Splash in 'Unit_Splash.pas' {Splash},
+  Unit_Apresentacao in 'Unit_Apresentacao.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TSplash, Splash);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

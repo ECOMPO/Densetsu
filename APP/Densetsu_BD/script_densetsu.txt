@@ -1,0 +1,229 @@
+
+CREATE  TABLE IF NOT EXISTS `densetsu`.`uf` (
+  `id_uf` INT NOT NULL AUTO_INCREMENT ,
+  `nome` VARCHAR(80) NOT NULL ,
+  `sigla` CHAR(2) NOT NULL ,
+  PRIMARY KEY (`id_uf`) )
+
+-------------------------------------------------------------------
+
+CREATE  TABLE IF NOT EXISTS `densetsu`.`contatos` (
+  `id_contatos` INT NOT NULL AUTO_INCREMENT ,
+  `telefone` VARCHAR(14) NOT NULL ,
+  `tipo` SET('residencial', 'comercial', 'celular', 'outros') NOT NULL DEFAULT outros ,
+  PRIMARY KEY (`id_contatos`) )
+
+---------------------------------------------------------------
+CIDADES
+CREATE  TABLE cidades
+ (
+  id_cidades INT NOT NULL AUTO_INCREMENT ,
+  nome VARCHAR(80) NOT NULL ,
+  id_uf INT NOT NULL ,
+  PRIMARY KEY (id_cidades) ,
+    FOREIGN KEY (id_uf ) REFERENCES uf (id_uf )
+);
+--------------------------------------------------------------
+CREATE  TABLE bairros 
+(
+  id_bairros INT NOT NULL AUTO_INCREMENT ,
+  nome VARCHAR(80) NOT NULL ,
+  id_cidades INT NOT NULL ,
+  PRIMARY KEY (id_bairros) ,
+      FOREIGN KEY (id_cidades ) REFERENCES cidades (id_cidades )
+);
+
+--------------------------------------------------------------
+CREATE  TABLE enderecos 
+(
+  id_enderecos INT NOT NULL AUTO_INCREMENT ,
+  nome_rua VARCHAR(80) NOT NULL ,
+  cep CHAR(9) NOT NULL ,
+  id_bairros INT NOT NULL ,
+  PRIMARY KEY (id_enderecos) ,
+      FOREIGN KEY (id_bairros ) REFERENCES bairros (id_bairros )
+);
+----------------------------------------------------------------------
+CREATE  TABLE clientes 
+(
+  id_clientes INT NOT NULL AUTO_INCREMENT ,
+  cpf CHAR(14) NOT NULL ,
+  nome VARCHAR(80) NOT NULL ,
+  numero_casa VARCHAR(4) NOT NULL ,
+  data_cadastro DATE NOT NULL ,
+  complemento VARCHAR(15) NULL ,
+  num_compras DECIMAL(5,0) NOT NULL ,
+  rg VARCHAR(15) NOT NULL ,
+  e_mail VARCHAR(45) NULL ,
+  id_contatos INT NOT NULL ,
+  id_enderecos INT NOT NULL ,
+  PRIMARY KEY (id_clientes) ,
+FOREIGN KEY (id_contatos ) REFERENCES contatos (id_contatos ),
+FOREIGN KEY (id_enderecos ) REFERENCES enderecos (id_enderecos )
+);
+
+---------------------------------------------------------------------------
+CREATE  TABLE dados_pessoais
+ (
+  id_dados_pessoais INT NOT NULL ,
+  data_nascimento DATE NOT NULL ,
+  uf_natal CHAR(2) NOT NULL ,
+  cidade_natal VARCHAR(80) NOT NULL ,
+  sexo CHAR(1) NOT NULL ,
+  estado_civil CHAR(1) NOT NULL ,
+  PRIMARY KEY (id_dados_pessoais) 
+);
+------------------------------------------------------------------------
+CREATE  TABLE funcionarios
+ (
+  id_funcionarios INT NOT NULL AUTO_INCREMENT ,
+  usuario VARCHAR(20) NOT NULL ,
+  nome VARCHAR(45) NOT NULL ,
+  CPF CHAR(14) NOT NULL ,
+  num_casa VARCHAR(4) NULL ,
+  complemento VARCHAR(15) NULL ,
+  data_admissao DATE NULL ,
+  cargo CHAR(11) NOT NULL ,
+  status CHAR NOT NULL ,
+  salario DECIMAL(10,0) NOT NULL ,
+  numero_dependentes DECIMAL(10,0) NOT NULL ,
+  rg VARCHAR(15) NOT NULL ,
+  e_mail VARCHAR(45) NULL ,
+  id_enderecos INT NOT NULL ,
+  id_dados_pessoais INT NOT NULL ,
+  id_contatos INT NOT NULL ,
+  PRIMARY KEY (id_funcionarios) ,
+FOREIGN KEY (id_enderecos ) REFERENCES enderecos (id_enderecos ),
+ FOREIGN KEY (id_dados_pessoais )REFERENCES dados_pessoais (id_dados_pessoais),
+FOREIGN KEY (id_contatos ) REFERENCES contatos (id_contatos )
+);
+
+---------------------------------------------------------------------------------------------------
+CREATE  TABLE produtos 
+(
+  id_produtos INT NOT NULL AUTO_INCREMENT ,
+  nome VARCHAR(45) NOT NULL ,
+  descricao VARCHAR(45) NULL ,
+  valor DECIMAL(10,0) NOT NULL ,
+  quantidade_estoque DECIMAL(10,0) NOT NULL ,
+  data_entrega DATE NOT NULL ,
+  PRIMARY KEY (id_produtos) 
+);
+-----------------------------------------------------------------------------------
+CREATE  TABLE usuarios 
+(
+  usuario VARCHAR(45) NOT NULL ,
+  senha VARCHAR(45) NOT NULL ,
+  nome VARCHAR(45) NOT NULL ,
+  cargo CHAR(11) NOT NULL ,
+  status CHAR(1) NOT NULL ,
+  primeiro_acesso CHAR(1) NULL ,
+  quantidade_acesso DECIMAL(10,0) NULL ,
+  data_ultimo_acesso DATE NULL ,
+  hora_ultimo_acesso TIME NULL ,
+  tipo CHAR(1) NULL ,
+  PRIMARY KEY (usuario)
+ );
+--------------------------------------------------------------------------------
+CREATE  TABLE unidades 
+(
+  id_unidades INT NOT NULL AUTO_INCREMENT ,
+  nome VARCHAR(80) NOT NULL ,
+  data_cadastramento DATE NOT NULL ,
+  nome_gerente VARCHAR(80) NOT NULL ,
+  telefone3 CHAR(14) NULL ,
+  e_mail VARCHAR(80) NOT NULL ,
+  cnpj CHAR(18) NOT NULL ,
+  numero_vendas DECIMAL(10,0) NULL ,
+  numero_casa VARCHAR(5) NULL ,
+  complemento VARCHAR(45) NULL ,
+  id_contatos INT NOT NULL ,
+  id_enderecos INT NOT NULL ,
+  PRIMARY KEY (id_unidades) ,
+FOREIGN KEY (id_contatos) REFERENCES contatos (id_contatos ),
+FOREIGN KEY (id_enderecos ) REFERENCES enderecos (id_enderecos )
+);
+
+---------------------------------------------------------------------------------------------------
+CREATE  TABLE parcelamentos 
+(
+  id_pagamentos INT NOT NULL AUTO_INCREMENT ,
+  tipo CHAR NOT NULL ,
+  quantidade_parcelas VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (id_pagamentos)
+ );
+
+----------------------------------------------------------------
+CREATE  TABLE vendas 
+(
+  id_vendas INT NOT NULL AUTO_INCREMENT ,
+  valor_venda DECIMAL(10,0) NOT NULL ,
+  data_venda DATE NOT NULL ,
+  usuario VARCHAR(45) NOT NULL ,
+ id_unidades INT NOT NULL ,
+  id_clientes INT NOT NULL ,
+  id_pagamentos INT NOT NULL ,
+  PRIMARY KEY (id_vendas),
+FOREIGN KEY (usuario ) REFERENCES usuarios (usuario ),
+ FOREIGN KEY (id_unidades ) REFERENCES unidades (id_unidades ),
+FOREIGN KEY (id_clientes ) REFERENCES clientes (id_clientes ),
+FOREIGN KEY (id_pagamentos )REFERENCES parcelamentos (id_pagamentos )
+);
+
+---------------------------------------------------------------------------
+CREATE  TABLE fornecedores 
+(
+  id_fornecedores INT NOT NULL AUTO_INCREMENT ,
+  nome VARCHAR(80) NOT NULL ,
+  numero_casa VARCHAR(45) NULL ,
+  telefone3 VARCHAR(15) NULL ,
+  e_mail VARCHAR(80) NOT NULL ,
+  cnpj VARCHAR(18) NOT NULL ,
+  PRIMARY KEY (id_fornecedores) 
+);
+
+-------------------------------------------------------------------
+
+CREATE  TABLE parcelas 
+(
+  id_parcelas INT NOT NULL AUTO_INCREMENT ,
+  valor_parcelas DECIMAL(10,0) NOT NULL ,
+  data_pagamento DATE NOT NULL ,
+  data_vencimento DATE NOT NULL ,
+  juros DECIMAL(10,0) NOT NULL ,
+  status CHAR NOT NULL ,
+  id_pagamentos INT NOT NULL ,
+  PRIMARY KEY (id_parcelas),
+FOREIGN KEY (id_pagamentos ) REFERENCES parcelamentos (id_pagamentos ) 
+);
+
+
+---------------------------------------------------------------------
+CREATE  TABLE vendas_produtos
+ (
+  id_vendas INT NOT NULL ,
+  id_produtos INT NOT NULL ,
+FOREIGN KEY (id_vendas ) REFERENCES vendas (id_vendas ),
+ FOREIGN KEY (id_produtos )REFERENCES produtos (id_produtos )
+);
+
+---------------------------------------------------
+CREATE  TABLE  produtos_fornecedores 
+(
+  id_produtos INT NOT NULL ,
+  id_fornecedores INT NOT NULL ,
+FOREIGN KEY (id_produtos ) REFERENCES produtos (id_produtos ),
+ FOREIGN KEY (id_fornecedores )REFERENCES fornecedores (id_fornecedores )
+);
+
+--------------------------------------------------------------------------------
+CREATE  TABLE anuncios 
+(
+  id_anuncios INT NOT NULL ,
+  titulo VARCHAR(80) NULL ,
+  id_produtos INT NOT NULL ,
+  descricao_oferta VARCHAR(150) NULL ,
+  PRIMARY KEY (id_anuncios) ,
+FOREIGN KEY (id_produtos ) REFERENCES produtos (id_produtos )
+);
+---------------------------------------------------------------------

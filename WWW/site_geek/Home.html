@@ -1,0 +1,448 @@
+<center>
+<title>Densetsu</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<style type="text/css">
+	a {display:block; text-decoration:none}
+	dl { width: 100%; }
+	dl,dd { margin: 0; }
+	dt { background: #CCC; font-size: 18px; padding: 5px; margin: 2px; }
+	dt a { color: #000; }
+	dd a { color: #000; }
+	ul { list-style: none; padding: 5px; }
+</style>
+<script type="text/javascript" src="default.js" charset="utf-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//Definimos que todos as tags dd terão display:none menos o primeiro filho
+		$('dd:not(:first)').hide();
+		//Ao clicar no link, executamos a funcao
+		$('dt a').click(function(){
+			//As tags dd's visíveis agora ficam com display:none
+			$("dd:visible").slideUp("slow");
+			//Apos, a funcao é transferida para seu pai, que procura o proximo irmao no codigo o tonando visível
+			$(this).parent().next().slideDown("slow");
+			return false;
+		});
+	});
+</script>
+<img src="images/banner.jpg" width="1401" height="250" alt="" />
+
+
+
+<center><div id='NavbarMenu'>
+<div id='NavbarMenuleft'>
+<ul id='nav'>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'> Lançamentos</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>kkkkkkkkkk</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Acessórios</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Cosplays</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Eventos</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+
+<li><a href='ENDEREÇO DO SEU LINK AQUI'>Mangás</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Playstation 2</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Promoções</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='ENDEREÇO DO SEU LINK AQUI'>Eventos</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Nintendo Wii</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li>
+<a href='ENDEREÇO DO SEU LINK AQUI'>Animes</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Nintendo DS</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Nintendo 3DS</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Ação</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Aventura</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Corrida</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Esporte</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Estratégia</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Guerra</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Luta</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Tiro</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Musical</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Simulação</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href='ENDEREÇO DO SEU LINK AQUI'>&nbsp;&nbsp;&nbsp;Outros&nbsp;&nbsp;&nbsp;</a>
+<ul>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Informática</a></li>
+<li><a href='ENDEREÇO DO SEU SUBLINK AQUI'>Acessórios para informática</a></li>
+</ul>
+</li>
+</div>
+</div>
+<div style='clear:both;'/>
+</center> <body></div></div>
+<center>
+
+<table width="1000" height="67">
+  <tr>
+    <td height="61"><img src="images/TESTE.JPG" width="1397" height="59" alt="" /></td>
+  </tr>
+</table>
+<table width="1290">
+  <tr>
+    <td width="244"><img src="images/1236960593-169x40-index_29.jpg" alt="" width="169" height="40" /></td>
+    <td width="28">&nbsp;</td>
+    <td width="33">&nbsp;</td>
+    <td width="28">&nbsp;</td>
+    <td width="416">&nbsp;</td>
+    <td width="76">&nbsp;</td>
+    <td width="220">&nbsp;</td>
+    <td width="191"><img src="images/1236960592-169x40-index_59.jpg" alt="" width="169" height="40" /></td>
+  </tr>
+  <tr>
+    <td>E-Mail
+          
+    
+      <input type="text" name="Nome" size="15" />
+    <td><form>
+
+
+
+<center></center>
+
+</form>
+</td></td></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td width="1">&nbsp;</td>
+    <td width="9">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Senha  
+          
+    
+      <input type="text" name="Nome" size="15" /></td>
+    <td><form>
+
+
+
+<center></center>
+
+</form></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img src="images/1236960098-169x22-index_50.jpg" alt="" width="169" height="22" /></td>
+  </tr>
+  <tr>
+    <td><input type=submit value=Entrar /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td ><ahref= "#">
+      <p>-Cadastra-se </a> <br /> 
+    <ahref= "#">-Esqueceu a sua senha ?</p>
+    <p><img src="images/1236960098-169x22-index_50.jpg" alt="" width="169" height="22" /></p>    
+    </a> </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<table width="1280">
+  <tr>
+    <td width="190"><p><img src="images/1236960319-169x40-index_27.jpg" alt="" width="169" height="40" /></p>
+    <p><ahref= "#">>Animes </a> <br />
+    <ahref= "#">>Camisetas </a> <br />
+    <ahref= "#">>Mangás </a> <br />
+    <ahref= "#">>Seriados </p>
+    <p><img src="images/1236960098-169x22-index_50.jpg" alt="" width="169" height="22" /></a> <br />
+    </p></td>
+    <td width="877"><center><top><img src="images/camiseta_pokemon.jpg" width="679" height="270"></top>
+    </center></td>
+    <td width="197"><p><img src="images/1236960589-169x40-index_82.jpg" alt="" width="169" height="40" /></p>
+      <p>Vote no melhor anime! 
+      <form>
+<left>
+<input type=radio name="time" value="Naruto" checked> Naruto<br>
+<input type=radio name="time" value="Bleach" >Bleach <br>
+<input type=radio name="time" value="Pokémom" >Pokémom <br>
+<input type=radio name="time" value="Dragon Ball" >Dragon Ball <br>
+<input type=radio name="time" value="Hunter x Hunter" >Hunter x Hunter<br>
+</left>
+</form></p>
+<form>
+
+<center><input type=submit value=Votar></center>
+
+</form>
+    <p><img src="images/1236960098-169x22-index_50.jpg" alt="" width="169" height="22" /></p></td>
+  </tr>
+  <tr>
+    <td><img src="images/dn.jpg" width="158" height="642" alt="" /></td>
+    <td>&nbsp;</td>
+    <td><img src="images/nah.jpg" width="158" height="640" alt="" /></td>
+  </tr>
+</table>
+<table width="995">
+  <tr>
+    
+  </tr>
+</table>
+<body  background= "imagens/fundo.jpg" </body>
+</body></center>
+</html>
