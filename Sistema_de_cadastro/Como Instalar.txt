@@ -1,0 +1,28 @@
+Modo de insalar o sistema de cadastro
+
+1 - Configure o arquivo "config_sistema.php" dentro do diretorio
+    "Config/config_sistema.php".
+
+	1.1 - configure as opções seguintes
+		$local_server = com "localhost"
+		$usuario_server = com o usuarioq você utilizara
+		$senha_server = com a senha que você utilizara
+		$banco_de_dados = com o nome cadastro
+
+	1.2 - configure a parte dos dados do administrador que servirar para você entrar
+    	      na parte de administração do sistema de cadastro.
+
+		1.2.1 - configure as opções seguintes
+			$login_admin = com o nome do administrador
+			$senha_admin = com a senha de administrador
+			$email_admin = com o email do administrador
+
+3 - Configurando o banco de dados
+
+	3.1 - Execute o arquivo DB_Cadastro para criar o banco de dados do sistema
+		entre no phpMyAdmin va em SQL, copie o texto que está dentro do "DB_Cadastro.sql"
+		cole dentro da caixa de texto que irar aparecer e aperte execultar e esta instalado
+		o sistema de cadastro.
+
+
+Favor manter os direitos autorais!
