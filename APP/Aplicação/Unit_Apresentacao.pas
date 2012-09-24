@@ -4,17 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, ExtCtrls, StdCtrls, Buttons;
+  Dialogs, ComCtrls, ExtCtrls, StdCtrls, Buttons, jpeg;
 
 type
   TApresentacao = class(TForm)
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     BitBtn1: TBitBtn;
-    Image1: TImage;
     BitBtn2: TBitBtn;
+    Image1: TImage;
     procedure Timer1Timer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,7 +27,7 @@ var
 
 implementation
 
-uses Unit_Splash;
+uses Unit_Splash, Unit2, Unit1;
 
 {$R *.dfm}
 
@@ -74,6 +75,11 @@ procedure TApresentacao.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
       Splash.Close;
+end;
+
+procedure TApresentacao.BitBtn1Click(Sender: TObject);
+begin
+login.showmodal;
 end;
 
 end.

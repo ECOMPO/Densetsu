@@ -1,0 +1,52 @@
+unit Unit9;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Buttons, Mask;
+
+type
+  TEndereco = class(TForm)
+    BitBtn8: TBitBtn;
+    GroupBox1: TGroupBox;
+    Estado: TLabel;
+    Cidade: TLabel;
+    Bairro: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    ComboBox3: TComboBox;
+    ComboBox4: TComboBox;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    MaskEdit1: TMaskEdit;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn5: TBitBtn;
+    BitBtn6: TBitBtn;
+    BitBtn7: TBitBtn;
+    procedure BitBtn8Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Endereco: TEndereco;
+
+implementation
+
+{$R *.dfm}
+
+procedure TEndereco.BitBtn8Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

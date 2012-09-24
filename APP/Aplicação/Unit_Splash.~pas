@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Gauges, ExtCtrls, ComCtrls, Spin, Buttons;
+  Dialogs, StdCtrls, Gauges, ExtCtrls, ComCtrls, Spin, Buttons, XPMan, jpeg;
 
 type
   TSplash = class(TForm)
@@ -44,6 +44,8 @@ type
     q10: TLabel;
     q9: TLabel;
     R: TSpeedButton;
+    XPManifest1: TXPManifest;
+    Image1: TImage;
     procedure Timer1Timer(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);
@@ -80,8 +82,8 @@ uses Unit_Apresentacao;
 // Configurando Tela de Splash
 procedure TSplash.Timer1Timer(Sender: TObject);
 begin
-      gauge1.Progress:=gauge1.Progress+10;
-              if(gauge1.progress=0) then
+      gauge1.Progress:=gauge1.Progress+1;
+              if(gauge1.progress=1) then
 begin
 end;
               if(gauge1.progress=10) then
