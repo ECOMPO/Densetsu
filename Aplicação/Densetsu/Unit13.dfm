@@ -53,6 +53,18 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 32
     Top = 168
+    object ZT_Bairroid_bairros: TIntegerField
+      FieldName = 'id_bairros'
+    end
+    object ZT_Bairronome: TStringField
+      FieldName = 'nome'
+      Required = True
+      Size = 80
+    end
+    object ZT_Bairroid_cidades: TIntegerField
+      FieldName = 'id_cidades'
+      Required = True
+    end
   end
   object ZT_Cidades: TZTable
     Connection = ZC_Densetsu
@@ -66,6 +78,18 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 32
     Top = 240
+    object ZT_Cidadesid_cidades: TIntegerField
+      FieldName = 'id_cidades'
+    end
+    object ZT_Cidadesnome: TStringField
+      FieldName = 'nome'
+      Required = True
+      Size = 80
+    end
+    object ZT_Cidadesid_uf: TIntegerField
+      FieldName = 'id_uf'
+      Required = True
+    end
   end
   object ZT_Clientes: TZTable
     Connection = ZC_Densetsu
@@ -139,11 +163,23 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 32
     Top = 384
+    object ZT_Contatosid_contatos: TIntegerField
+      FieldName = 'id_contatos'
+    end
+    object ZT_Contatostelefone: TStringField
+      FieldName = 'telefone'
+      Required = True
+      Size = 14
+    end
+    object ZT_Contatostipo: TStringField
+      FieldName = 'tipo'
+      Required = True
+      Size = 36
+    end
   end
   object ZT_Dados: TZTable
     Connection = ZC_Densetsu
     CachedUpdates = False
-    Active = True
     ReadOnly = False
     TableName = 'dados_pessoais'
     ShowRecordTypes = [usUnmodified, usModified, usInserted]
@@ -152,6 +188,34 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 32
     Top = 456
+    object ZT_Dadosid_dados_pessoais: TIntegerField
+      FieldName = 'id_dados_pessoais'
+      Required = True
+    end
+    object ZT_Dadosdata_nascimento: TDateField
+      FieldName = 'data_nascimento'
+      Required = True
+    end
+    object ZT_Dadosuf_natal: TStringField
+      FieldName = 'uf_natal'
+      Required = True
+      Size = 2
+    end
+    object ZT_Dadoscidade_natal: TStringField
+      FieldName = 'cidade_natal'
+      Required = True
+      Size = 80
+    end
+    object ZT_Dadossexo: TStringField
+      FieldName = 'sexo'
+      Required = True
+      Size = 1
+    end
+    object ZT_Dadosestado_civil: TStringField
+      FieldName = 'estado_civil'
+      Required = True
+      Size = 1
+    end
   end
   object ZT_Endereco: TZTable
     Connection = ZC_Densetsu
@@ -323,6 +387,19 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 232
     Top = 24
+    object ZT_UFid_uf: TIntegerField
+      FieldName = 'id_uf'
+    end
+    object ZT_UFnome: TStringField
+      FieldName = 'nome'
+      Required = True
+      Size = 80
+    end
+    object ZT_UFsigla: TStringField
+      FieldName = 'sigla'
+      Required = True
+      Size = 2
+    end
   end
   object ZT_Unidades: TZTable
     Connection = ZC_Densetsu

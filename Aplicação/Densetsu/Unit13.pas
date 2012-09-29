@@ -67,6 +67,24 @@ type
     ZT_Endereconome_rua: TStringField;
     ZT_Enderecocep: TStringField;
     ZT_Enderecoid_bairros: TIntegerField;
+    ZT_Bairroid_bairros: TIntegerField;
+    ZT_Bairronome: TStringField;
+    ZT_Bairroid_cidades: TIntegerField;
+    ZT_Cidadesid_cidades: TIntegerField;
+    ZT_Cidadesnome: TStringField;
+    ZT_Cidadesid_uf: TIntegerField;
+    ZT_Contatosid_contatos: TIntegerField;
+    ZT_Contatostelefone: TStringField;
+    ZT_Contatostipo: TStringField;
+    ZT_Dadosid_dados_pessoais: TIntegerField;
+    ZT_Dadosdata_nascimento: TDateField;
+    ZT_Dadosuf_natal: TStringField;
+    ZT_Dadoscidade_natal: TStringField;
+    ZT_Dadossexo: TStringField;
+    ZT_Dadosestado_civil: TStringField;
+    ZT_UFid_uf: TIntegerField;
+    ZT_UFnome: TStringField;
+    ZT_UFsigla: TStringField;
   private
     { Private declarations }
   public

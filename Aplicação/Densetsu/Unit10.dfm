@@ -99,7 +99,7 @@ object Anuncios: TAnuncios
     Width = 505
     Height = 345
     Cursor = crHandPoint
-    ActivePage = TabSheet3
+    ActivePage = TabSheet1
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'Cadastrar'

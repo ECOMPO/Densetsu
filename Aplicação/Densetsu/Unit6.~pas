@@ -8,10 +8,7 @@ uses
 
 type
   TFornecedores = class(TForm)
-    Label2: TLabel;
-    BitBtn4: TBitBtn;
     BitBtn5: TBitBtn;
-    BitBtn6: TBitBtn;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
@@ -39,15 +36,19 @@ type
     Edit2: TEdit;
     DBGrid1: TDBGrid;
     BitBtn1: TBitBtn;
+    TabSheet3: TTabSheet;
     Label10: TLabel;
-    DBEdit7: TDBEdit;
     Label11: TLabel;
-    DBEdit8: TDBEdit;
     Label12: TLabel;
+    Label13: TLabel;
+    DBEdit7: TDBEdit;
+    DBEdit8: TDBEdit;
     MaskEdit3: TMaskEdit;
     MaskEdit4: TMaskEdit;
-    Label13: TLabel;
+    BitBtn4: TBitBtn;
+    BitBtn6: TBitBtn;
     BitBtn2: TBitBtn;
+    BitBtn3: TBitBtn;
     procedure BitBtn5Click(Sender: TObject);
   private
     { Private declarations }
