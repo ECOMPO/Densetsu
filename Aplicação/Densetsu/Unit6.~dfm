@@ -1,9 +1,10 @@
 object Fornecedores: TFornecedores
-  Left = 356
-  Top = 147
-  Width = 690
-  Height = 304
+  Left = 460
+  Top = 250
+  BorderStyle = bsDialog
   Caption = '.:Fornecedores:.'
+  ClientHeight = 274
+  ClientWidth = 674
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,18 +15,9 @@ object Fornecedores: TFornecedores
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 8
-    Top = 504
-    Width = 76
-    Height = 13
-    Caption = 'id_fornecedores'
-    FocusControl = DBEdit1
-    Visible = False
-  end
   object Label4: TLabel
     Left = 152
-    Top = 504
+    Top = 304
     Width = 64
     Height = 13
     Caption = 'numero_casa'
@@ -34,7 +26,7 @@ object Fornecedores: TFornecedores
   end
   object Label5: TLabel
     Left = 8
-    Top = 544
+    Top = 344
     Width = 44
     Height = 13
     Caption = 'telefone3'
@@ -43,7 +35,7 @@ object Fornecedores: TFornecedores
   end
   object Label8: TLabel
     Left = 216
-    Top = 544
+    Top = 344
     Width = 20
     Height = 13
     Caption = 'cnpj'
@@ -51,8 +43,8 @@ object Fornecedores: TFornecedores
     Visible = False
   end
   object BitBtn5: TBitBtn
-    Left = 0
-    Top = 0
+    Left = 8
+    Top = 8
     Width = 75
     Height = 33
     Cursor = crHandPoint
@@ -114,11 +106,11 @@ object Fornecedores: TFornecedores
   end
   object PageControl1: TPageControl
     Left = 8
-    Top = 40
+    Top = 48
     Width = 657
     Height = 217
     Cursor = crHandPoint
-    ActivePage = TabSheet3
+    ActivePage = TabSheet1
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'Cadastrar'
@@ -436,7 +428,6 @@ object Fornecedores: TFornecedores
         Width = 28
         Height = 13
         Caption = 'Nome'
-        FocusControl = DBEdit7
       end
       object Label11: TLabel
         Left = 8
@@ -444,7 +435,6 @@ object Fornecedores: TFornecedores
         Width = 32
         Height = 13
         Caption = 'E_Mail'
-        FocusControl = DBEdit8
       end
       object Label12: TLabel
         Left = 8
@@ -460,24 +450,6 @@ object Fornecedores: TFornecedores
         Height = 13
         Caption = 'Telefone'
       end
-      object DBEdit7: TDBEdit
-        Left = 8
-        Top = 64
-        Width = 625
-        Height = 21
-        DataField = 'nome'
-        DataSource = DataSource1
-        TabOrder = 0
-      end
-      object DBEdit8: TDBEdit
-        Left = 8
-        Top = 112
-        Width = 433
-        Height = 21
-        DataField = 'e_mail'
-        DataSource = DataSource1
-        TabOrder = 1
-      end
       object MaskEdit3: TMaskEdit
         Left = 8
         Top = 24
@@ -485,7 +457,7 @@ object Fornecedores: TFornecedores
         Height = 21
         EditMask = '00.000.000/0000-00;1;_'
         MaxLength = 18
-        TabOrder = 2
+        TabOrder = 0
         Text = '  .   .   /    -  '
       end
       object MaskEdit4: TMaskEdit
@@ -495,7 +467,7 @@ object Fornecedores: TFornecedores
         Height = 21
         EditMask = '!\(00\)0000-0000;1;_'
         MaxLength = 13
-        TabOrder = 3
+        TabOrder = 1
         Text = '(  )    -    '
       end
       object BitBtn2: TBitBtn
@@ -504,7 +476,7 @@ object Fornecedores: TFornecedores
         Width = 81
         Height = 33
         Caption = 'Atualizar'
-        TabOrder = 4
+        TabOrder = 2
         Glyph.Data = {
           86050000424D8605000000000000460300002800000018000000180000000100
           08000000000040020000120B0000120B0000C4000000C400000000000000FFFF
@@ -558,7 +530,7 @@ object Fornecedores: TFornecedores
         Width = 81
         Height = 33
         Caption = 'Excluir'
-        TabOrder = 5
+        TabOrder = 3
         Glyph.Data = {
           76060000424D7606000000000000360400002800000018000000180000000100
           0800000000004002000000000000000000000001000000010000FF00FF000000
@@ -613,50 +585,129 @@ object Fornecedores: TFornecedores
           7366390200000000000000000000070851517063615B5B444404020000000000
           0000000000000000070707070707070707000000000000000000}
       end
+      object Edit3: TEdit
+        Left = 8
+        Top = 64
+        Width = 617
+        Height = 21
+        TabOrder = 4
+      end
+      object Edit4: TEdit
+        Left = 8
+        Top = 112
+        Width = 449
+        Height = 21
+        TabOrder = 5
+      end
     end
-  end
-  object DBEdit1: TDBEdit
-    Left = 8
-    Top = 520
-    Width = 134
-    Height = 21
-    DataField = 'id_fornecedores'
-    DataSource = DataSource1
-    TabOrder = 2
-    Visible = False
   end
   object DBEdit3: TDBEdit
     Left = 152
-    Top = 520
+    Top = 320
     Width = 73
     Height = 21
     DataField = 'numero_casa'
     DataSource = DataSource1
-    TabOrder = 3
+    TabOrder = 2
     Visible = False
   end
   object DBEdit4: TDBEdit
     Left = 8
-    Top = 560
+    Top = 360
     Width = 199
     Height = 21
     DataField = 'telefone3'
     DataSource = DataSource1
-    TabOrder = 4
+    TabOrder = 3
     Visible = False
   end
   object DBEdit6: TDBEdit
     Left = 216
-    Top = 560
+    Top = 360
     Width = 238
     Height = 21
     DataField = 'cnpj'
     DataSource = DataSource1
+    TabOrder = 4
+    Visible = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 32
+    Top = 400
+    Width = 185
+    Height = 73
+    Caption = 'chave primaria'
     TabOrder = 5
     Visible = False
+    object Label1: TLabel
+      Left = 8
+      Top = 20
+      Width = 76
+      Height = 13
+      Caption = 'id_fornecedores'
+      FocusControl = DBEdit1
+      Visible = False
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Top = 36
+      Width = 134
+      Height = 21
+      DataField = 'id_fornecedores'
+      DataSource = DataSource1
+      TabOrder = 0
+      Visible = False
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 232
+    Top = 400
+    Width = 185
+    Height = 105
+    Caption = 'chave estrangeiras'
+    TabOrder = 6
+    Visible = False
+    object Label2: TLabel
+      Left = 8
+      Top = 24
+      Width = 55
+      Height = 13
+      Caption = 'id_produtos'
+      FocusControl = DBEdit9
+    end
+    object Label14: TLabel
+      Left = 8
+      Top = 64
+      Width = 76
+      Height = 13
+      Caption = 'id_fornecedores'
+      FocusControl = DBEdit10
+    end
+    object DBEdit9: TDBEdit
+      Left = 8
+      Top = 40
+      Width = 134
+      Height = 21
+      DataField = 'id_produtos'
+      DataSource = DataSource2
+      TabOrder = 0
+    end
+    object DBEdit10: TDBEdit
+      Left = 8
+      Top = 80
+      Width = 134
+      Height = 21
+      DataField = 'id_fornecedores'
+      DataSource = DataSource2
+      TabOrder = 1
+    end
   end
   object DataSource1: TDataSource
     DataSet = DM.ZT_Fornecedores
     Left = 648
+  end
+  object DataSource2: TDataSource
+    DataSet = DM.ZT_PF
+    Left = 616
   end
 end

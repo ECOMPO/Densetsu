@@ -8,10 +8,7 @@ uses
 
 type
   TProdutos = class(TForm)
-    Label2: TLabel;
-    BitBtn4: TBitBtn;
     BitBtn5: TBitBtn;
-    BitBtn6: TBitBtn;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
@@ -41,19 +38,23 @@ type
     RadioButton3: TRadioButton;
     Edit1: TEdit;
     Edit2: TEdit;
+    DBGrid1: TDBGrid;
+    BitBtn2: TBitBtn;
+    TabSheet3: TTabSheet;
     Label12: TLabel;
-    DBEdit8: TDBEdit;
     Label13: TLabel;
-    DBEdit9: TDBEdit;
-    Memo2: TMemo;
     Label14: TLabel;
-    DateTimePicker2: TDateTimePicker;
     Label15: TLabel;
     Label16: TLabel;
+    DBEdit8: TDBEdit;
+    DBEdit9: TDBEdit;
+    Memo2: TMemo;
+    DateTimePicker2: TDateTimePicker;
     MaskEdit2: TMaskEdit;
-    DBGrid1: TDBGrid;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    BitBtn4: TBitBtn;
+    BitBtn6: TBitBtn;
+    BitBtn7: TBitBtn;
+    BitBtn8: TBitBtn;
   private
     { Private declarations }
   public

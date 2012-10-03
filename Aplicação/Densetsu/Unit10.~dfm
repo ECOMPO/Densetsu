@@ -1,9 +1,10 @@
 object Anuncios: TAnuncios
   Left = 411
   Top = 96
-  Width = 538
-  Height = 449
+  BorderStyle = bsDialog
   Caption = '.:Anuncios:.'
+  ClientHeight = 415
+  ClientWidth = 530
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +12,7 @@ object Anuncios: TAnuncios
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -32,8 +34,8 @@ object Anuncios: TAnuncios
     Visible = False
   end
   object BitBtn2: TBitBtn
-    Left = 0
-    Top = 0
+    Left = 8
+    Top = 8
     Width = 75
     Height = 33
     Cursor = crHandPoint
@@ -99,7 +101,7 @@ object Anuncios: TAnuncios
     Width = 505
     Height = 345
     Cursor = crHandPoint
-    ActivePage = TabSheet3
+    ActivePage = TabSheet1
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'Cadastrar'
@@ -294,6 +296,7 @@ object Anuncios: TAnuncios
         Top = 48
         Width = 81
         Height = 33
+        Cursor = crHandPoint
         Caption = 'Consultar'
         TabOrder = 2
         Glyph.Data = {
@@ -421,6 +424,7 @@ object Anuncios: TAnuncios
         Top = 280
         Width = 81
         Height = 33
+        Cursor = crHandPoint
         Caption = 'Atualizar'
         TabOrder = 2
         Glyph.Data = {
@@ -475,6 +479,7 @@ object Anuncios: TAnuncios
         Top = 280
         Width = 81
         Height = 33
+        Cursor = crHandPoint
         Caption = 'Excluir'
         TabOrder = 3
         Glyph.Data = {

@@ -12,8 +12,6 @@ type
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
     DataSource1: TDataSource;
     Label3: TLabel;
     DBEdit2: TDBEdit;
@@ -41,14 +39,23 @@ type
     Label11: TLabel;
     Label12: TLabel;
     Label13: TLabel;
-    DBEdit7: TDBEdit;
-    DBEdit8: TDBEdit;
     MaskEdit3: TMaskEdit;
     MaskEdit4: TMaskEdit;
     BitBtn4: TBitBtn;
     BitBtn6: TBitBtn;
     BitBtn2: TBitBtn;
     BitBtn3: TBitBtn;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit9: TDBEdit;
+    DataSource2: TDataSource;
+    Label14: TLabel;
+    DBEdit10: TDBEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
     procedure BitBtn5Click(Sender: TObject);
   private
     { Private declarations }

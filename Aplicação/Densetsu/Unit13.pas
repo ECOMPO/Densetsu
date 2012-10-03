@@ -85,6 +85,36 @@ type
     ZT_UFid_uf: TIntegerField;
     ZT_UFnome: TStringField;
     ZT_UFsigla: TStringField;
+    ZT_Funcionariosid_funcionarios: TIntegerField;
+    ZT_Funcionariosusuario: TStringField;
+    ZT_Funcionariosnome: TStringField;
+    ZT_FuncionariosCPF: TStringField;
+    ZT_Funcionariosnum_casa: TStringField;
+    ZT_Funcionarioscomplemento: TStringField;
+    ZT_Funcionariosdata_admissao: TDateField;
+    ZT_Funcionarioscargo: TStringField;
+    ZT_Funcionariosstatus: TStringField;
+    ZT_Funcionariossalario: TLargeintField;
+    ZT_Funcionariosnumero_dependentes: TLargeintField;
+    ZT_Funcionariosrg: TStringField;
+    ZT_Funcionariose_mail: TStringField;
+    ZT_Funcionariosid_enderecos: TIntegerField;
+    ZT_Funcionariosid_dados_pessoais: TIntegerField;
+    ZT_Funcionariosid_contatos: TIntegerField;
+    ZT_Vendasid_vendas: TIntegerField;
+    ZT_Vendasvalor_venda: TLargeintField;
+    ZT_Vendasdata_venda: TDateField;
+    ZT_Vendasusuario: TStringField;
+    ZT_Vendasid_unidades: TIntegerField;
+    ZT_Vendasid_clientes: TIntegerField;
+    ZT_Vendasid_pagamentos: TIntegerField;
+    ZT_Parcelamentosid_pagamentos: TIntegerField;
+    ZT_Parcelamentostipo: TStringField;
+    ZT_Parcelamentosquantidade_parcelas: TStringField;
+    ZT_VPid_vendas: TIntegerField;
+    ZT_VPid_produtos: TIntegerField;
+    ZT_PFid_produtos: TIntegerField;
+    ZT_PFid_fornecedores: TIntegerField;
   private
     { Private declarations }
   public

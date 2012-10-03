@@ -20,10 +20,13 @@ type
     Label2: TLabel;
     BitBtn6: TBitBtn;
     BitBtn7: TBitBtn;
-    Image1: TImage;
     Timer1: TTimer;
     Label3: TLabel;
     Label4: TLabel;
+    BitBtn8: TBitBtn;
+    Panel3: TPanel;
+    BitBtn9: TBitBtn;
+    BitBtn10: TBitBtn;
     procedure Timer1Timer(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);

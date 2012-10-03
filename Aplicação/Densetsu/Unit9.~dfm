@@ -2,7 +2,7 @@ object Endereco: TEndereco
   Left = 354
   Top = 152
   Width = 530
-  Height = 416
+  Height = 417
   Caption = '.:Endere'#231'o:.'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

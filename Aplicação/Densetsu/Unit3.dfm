@@ -1,9 +1,10 @@
 object Clientes: TClientes
   Left = 397
   Top = 58
-  Width = 649
-  Height = 598
+  BorderStyle = bsDialog
   Caption = '.:Clientes:.'
+  ClientHeight = 570
+  ClientWidth = 635
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -105,8 +106,8 @@ object Clientes: TClientes
     Visible = False
   end
   object BitBtn5: TBitBtn
-    Left = 0
-    Top = 0
+    Left = 8
+    Top = 8
     Width = 75
     Height = 33
     Cursor = crHandPoint
@@ -168,7 +169,7 @@ object Clientes: TClientes
   end
   object PageControl1: TPageControl
     Left = 8
-    Top = 40
+    Top = 48
     Width = 617
     Height = 513
     Cursor = crHandPoint
@@ -372,6 +373,7 @@ object Clientes: TClientes
           Top = 8
           Width = 65
           Height = 33
+          Cursor = crHandPoint
           Caption = '...'
           TabOrder = 7
           Glyph.Data = {
@@ -759,6 +761,7 @@ object Clientes: TClientes
         Top = 48
         Width = 81
         Height = 33
+        Cursor = crHandPoint
         Caption = 'Consultar'
         TabOrder = 2
         Glyph.Data = {

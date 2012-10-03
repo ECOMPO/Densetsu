@@ -1,6 +1,7 @@
 object DM: TDM
   OldCreateOrder = False
-  Top = 74
+  Left = 591
+  Top = 136
   Height = 551
   Width = 313
   object ZC_Densetsu: TZConnection
@@ -298,6 +299,73 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 136
     Top = 168
+    object ZT_Funcionariosid_funcionarios: TIntegerField
+      FieldName = 'id_funcionarios'
+    end
+    object ZT_Funcionariosusuario: TStringField
+      FieldName = 'usuario'
+      Required = True
+    end
+    object ZT_Funcionariosnome: TStringField
+      FieldName = 'nome'
+      Required = True
+      Size = 45
+    end
+    object ZT_FuncionariosCPF: TStringField
+      FieldName = 'CPF'
+      Required = True
+      Size = 14
+    end
+    object ZT_Funcionariosnum_casa: TStringField
+      FieldName = 'num_casa'
+      Size = 4
+    end
+    object ZT_Funcionarioscomplemento: TStringField
+      FieldName = 'complemento'
+      Size = 15
+    end
+    object ZT_Funcionariosdata_admissao: TDateField
+      FieldName = 'data_admissao'
+    end
+    object ZT_Funcionarioscargo: TStringField
+      FieldName = 'cargo'
+      Required = True
+      Size = 11
+    end
+    object ZT_Funcionariosstatus: TStringField
+      FieldName = 'status'
+      Required = True
+      Size = 1
+    end
+    object ZT_Funcionariossalario: TLargeintField
+      FieldName = 'salario'
+      Required = True
+    end
+    object ZT_Funcionariosnumero_dependentes: TLargeintField
+      FieldName = 'numero_dependentes'
+      Required = True
+    end
+    object ZT_Funcionariosrg: TStringField
+      FieldName = 'rg'
+      Required = True
+      Size = 15
+    end
+    object ZT_Funcionariose_mail: TStringField
+      FieldName = 'e_mail'
+      Size = 45
+    end
+    object ZT_Funcionariosid_enderecos: TIntegerField
+      FieldName = 'id_enderecos'
+      Required = True
+    end
+    object ZT_Funcionariosid_dados_pessoais: TIntegerField
+      FieldName = 'id_dados_pessoais'
+      Required = True
+    end
+    object ZT_Funcionariosid_contatos: TIntegerField
+      FieldName = 'id_contatos'
+      Required = True
+    end
   end
   object ZT_Parcelamentos: TZTable
     Connection = ZC_Densetsu
@@ -311,6 +379,19 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 136
     Top = 240
+    object ZT_Parcelamentosid_pagamentos: TIntegerField
+      FieldName = 'id_pagamentos'
+    end
+    object ZT_Parcelamentostipo: TStringField
+      FieldName = 'tipo'
+      Required = True
+      Size = 1
+    end
+    object ZT_Parcelamentosquantidade_parcelas: TStringField
+      FieldName = 'quantidade_parcelas'
+      Required = True
+      Size = 45
+    end
   end
   object ZT_Parcelas: TZTable
     Connection = ZC_Densetsu
@@ -374,6 +455,14 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 136
     Top = 456
+    object ZT_PFid_produtos: TIntegerField
+      FieldName = 'id_produtos'
+      Required = True
+    end
+    object ZT_PFid_fornecedores: TIntegerField
+      FieldName = 'id_fornecedores'
+      Required = True
+    end
   end
   object ZT_UF: TZTable
     Connection = ZC_Densetsu
@@ -417,7 +506,6 @@ object DM: TDM
   object ZT_Usuarios: TZTable
     Connection = ZC_Densetsu
     CachedUpdates = False
-    Active = True
     ReadOnly = False
     TableName = 'usuarios'
     ShowRecordTypes = [usUnmodified, usModified, usInserted]
@@ -481,6 +569,34 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 232
     Top = 240
+    object ZT_Vendasid_vendas: TIntegerField
+      FieldName = 'id_vendas'
+    end
+    object ZT_Vendasvalor_venda: TLargeintField
+      FieldName = 'valor_venda'
+      Required = True
+    end
+    object ZT_Vendasusuario: TStringField
+      FieldName = 'usuario'
+      Required = True
+      Size = 45
+    end
+    object ZT_Vendasid_unidades: TIntegerField
+      FieldName = 'id_unidades'
+      Required = True
+    end
+    object ZT_Vendasid_clientes: TIntegerField
+      FieldName = 'id_clientes'
+      Required = True
+    end
+    object ZT_Vendasdata_venda: TDateField
+      FieldName = 'data_venda'
+      Required = True
+    end
+    object ZT_Vendasid_pagamentos: TIntegerField
+      FieldName = 'id_pagamentos'
+      Required = True
+    end
   end
   object ZT_VP: TZTable
     Connection = ZC_Densetsu
@@ -494,5 +610,13 @@ object DM: TDM
     Options = [doCalcDefaults]
     Left = 232
     Top = 312
+    object ZT_VPid_produtos: TIntegerField
+      FieldName = 'id_produtos'
+      Required = True
+    end
+    object ZT_VPid_vendas: TIntegerField
+      FieldName = 'id_vendas'
+      Required = True
+    end
   end
 end

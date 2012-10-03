@@ -59,7 +59,7 @@ object AboutBox: TAboutBox
     object Label3: TLabel
       Left = 8
       Top = 136
-      Width = 345
+      Width = 342
       Height = 31
       Caption = 'Desenvolvedor: Geek Sistemas'
       Color = clWindow

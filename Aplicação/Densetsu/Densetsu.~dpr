@@ -15,7 +15,8 @@ uses
   Unit9 in 'Unit9.pas' {Endereco},
   Unit10 in 'Unit10.pas' {Anuncios},
   Unit11 in 'Unit11.pas' {AboutBox},
-  Unit13 in 'Unit13.pas' {DataModule12: TDataModule};
+  Unit13 in 'Unit13.pas' {DM: TDataModule},
+  Unit14 in 'Unit14.pas' {Form12};
 
 {$R *.res}
 
@@ -34,6 +35,7 @@ begin
   Application.CreateForm(TEndereco, Endereco);
   Application.CreateForm(TAnuncios, Anuncios);
   Application.CreateForm(TAboutBox, AboutBox);
-  Application.CreateForm(TDataModule12, DataModule12);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TForm12, Form12);
   Application.Run;
 end.
