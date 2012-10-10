@@ -19,6 +19,91 @@ include "Config/config_sistema.php";
 // faz consulta no banco
 $consulta = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
 ?>
+
+<script type="text/javascript">
+function ChangeButton(img,div)
+{
+	var parentIMG = document.getElementById(img);
+	var sourceantigo = parentIMG.src;
+	var splited = sourceantigo.split("/");
+	var total = parseInt(splited.length);
+	sourceantigo = splited[total-1];
+	if (sourceantigo == "sinal_menos.jpg")
+	{
+		newsource = "sinal_mais.jpg"
+	}
+	else
+	{
+		newsource = "sinal_menos.jpg"
+	}
+	var newinput = document.createElement('img');
+	newinput.src = 'images/' + newsource;
+	newinput.width = '27';
+	newinput.height = '27';
+	newinput.id = img;
+	parentIMG.parentNode.replaceChild(newinput,parentIMG);
+	document.getElementById(img).onclick = function()
+	{
+		ChangeButton(img,div);
+		expandcontentnew(div);
+	};
+}
+</script>
+<script type="text/javascript">
+var enablepersist="off" //Enable saving state of content structure? (on/off)
+
+if (document.getElementById)
+{
+	document.write('<style type="text/css">')
+	document.write('.switchcontent{display:none;}')
+	document.write('</style>')
+}
+
+function getElementbyClassnew(classname)
+{
+	ccollectnew=new Array()
+	var incnew=0
+	var alltagsnew=document.all? document.all : document.getElementsByTagName("*")
+	for (i=0; i<alltagsnew.length; i++)
+	{
+		if (alltagsnew[i].className==classname)
+		ccollectnew[incnew++]=alltagsnew[i]
+	}
+	expandcontentnew('quemsomosdiv');	
+	expandcontentnew('oquefazemosdiv');
+}
+function contractcontentnew(omit)
+{
+	var incnew=0
+	while (ccollectnew[incnew])
+	{
+		if (ccollectnew[incnew].id==omit)
+		ccollectnew[incnew].style.display="none"
+		incnew++
+	}
+}
+function expandcontentnew(cid)
+{
+	if (typeof ccollectnew!="undefined")
+	{
+		document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+		selectedItem=cid+"|"+document.getElementById(cid).style.display
+	}
+}
+
+function do_onloadnew()
+{
+	getElementbyClassnew("switchcontentnew")
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", do_onloadnew, true)
+else if (window.attachEvent)
+	window.attachEvent("onload", do_onloadnew)
+else if (document.getElementById)
+	window.onload=do_onloadnew
+</script>
+
 <center>
 <title>Densetsu</title>
 <head>
@@ -144,7 +229,7 @@ while($linha = mysql_fetch_object($consulta)) {
     <td valign="top"><div align="left">
       <table width="100%" border="0">
         <tr>
-          <td width="34%" valign="top"><div align="center"><img src="images/games02.jpg" width="492" height="295"></div></td>
+          <td width="34%" valign="top"><div align="center"></div></td>
           </tr>
       </table>
     </div></td>
@@ -180,16 +265,28 @@ while($linha = mysql_fetch_object($consulta)) {
 </table>
 <table width="1000" border="0">
   <tr>
-    <td width="185" valign="top"><div align="left"><img src="images/bt_categoria.jpg" alt="" width="160" height="35" align="top" /> <br>
+    <td width="185" height="187" valign="top"><div align="left"><img src="images/bt_categoria.jpg" alt="" width="160" height="35" align="top" /> <br>
     </div>
       <p class="style6">>Animes </a> <br />
 >Camisetas </a> <br />
 >Mang&aacute;s </a> <br />
 >Seriados </p>
     <p></a></p></td>
-    <td width="623"><div align="center"><img src="images/and2012s.jpg" width="405" height="120"></div>
-      <div align="center"><br>
-    </div></td>
+    <td width="623" valign="top">    <div align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%" valign="top"><div align="left"><img src="images/sinal_mais.jpg" width="27" height="27" id="oquefazemosimg" onclick="ChangeButton('oquefazemosimg','oquefazemosdiv');expandcontentnew('oquefazemosdiv');" /></div></td>
+                  <td width="95%" class="Fonte02"><div align="left" class="Fonte02"><strong> O QUE FAZEMOS </strong></div></td>
+              </tr>
+            </table>
+            <div class="switchcontent" id="oquefazemosdiv">
+            <br />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top"><div align="left" class="Fonte09">                  Orientamos  candidatos em seus estudos preparat&oacute;rios atrav&eacute;s dos resultados obtidos no  simulado ComparaA&ccedil;&atilde;o. <br />
+                  <br />
+                </div></td>
+              </tr>
+    </table></div></td>
     <td width="178" valign="top"><div align="right"><img src="images/bt-carrinho.jpg" width="160" height="35" align="top"><br>
       <br>
       <img src="images/carrrinho.jpg" width="140" height="93"><br>

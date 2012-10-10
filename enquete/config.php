@@ -1,0 +1,11 @@
+<?php
+$textcolor='black';
+$linkcolor='#FFFFFF';
+$bgcolor='#f7f7f7';
+$tableborder='#f7f7f7';
+$timeout='999';
+$ip_file='ip.txt';
+$font='Tahoma';
+$fontsize='1';
+$datafile='dados.txt';
+?>

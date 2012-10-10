@@ -119,7 +119,7 @@ include "inc_topo.php";
 // PROPAGANDA DO TOP DO SITE
 $i= (int)rand (1,4);
 
-print "<img src= '/site_geek/images/prop{$i}.jpg' />";
+print "<img src= 'images/prop{$i}.jpg' />";
 ?>
       </div></td>
     <td>

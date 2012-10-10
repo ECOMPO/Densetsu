@@ -16,8 +16,8 @@ if(isset($_SESSION['login_usuario']) and isset($_SESSION['senha_usuario'])) {
 
 include "Config/config_sistema.php";
 
-
-
+// faz consulta no banco
+$consulta = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
 ?>
 
 <center>
@@ -89,9 +89,9 @@ include "inc_topo.php";
 <body background=""></div></div>
 <table width="1000">
   <tr>
-    <td width="180"><div align="left"><img src="images/bt_login.jpg" alt="" width="160" height="35" /></div></td>
-    <td width="625" valign="top" background="images/back_titulos.jpg">
-    <div align="center" class="style7"><span class="style10">Nossos Acess&oacute;rios </span></div></td>
+    <td width="182"><img src="images/bt_login.jpg" alt="" width="160" height="35" /></td>
+    <td width="623" valign="top" background="images/back_titulos.jpg">
+    <div align="center" class="style7"><span class="style10">Acess&oacute;rios em Destaques </span></div></td>
     <td width="179"><div align="right"><img src="images/bt_enquete.jpg" alt="" width="160" height="35" align="top" /></div></td>
   </tr>
   <tr>
@@ -100,21 +100,24 @@ include "inc_topo.php";
   <td>  </tr>
   <tr>
     <td height="200" valign="top"><form action="logar.php" method="post" enctype="multipart/form-data" name="formlogin">
-      <table width="168" height="197" border="0" cellpadding="0" cellspacing="0">
+      <table width="182" height="197" border="0" cellpadding="0" cellspacing="0">
         <!--DWLayoutTable-->
         <tr>
-          <td width="10" height="82">&nbsp;</td>
+          <td height="82">&nbsp;</td>
           <td colspan="6" valign="top"><div align="left"><span class="style3">Usu&aacute;rio: </span>
-                  <input name="login" type="text" id="login" maxlength="200" />
-                  <span class="style3">Senha: </span>
-                  <input name="senha" type="password" id="label" maxlength="15" />
+            <input name="login" type="text" id="login" maxlength="200" />
+                <span class="style3">Senha:                </span>
+                <input name="senha" type="password" id="label" maxlength="15" />
           </div></td>
+          
         </tr>
         <tr>
           <td height="35">&nbsp;</td>
-          <td width="149"><a href="cadastro.php" class="style3">
+          <td><a href="cadastro.php" class="style3">
             <input type="submit" name="Entrar" value="Entrar" id="logar" />
           </a></td>
+    
+         
         </tr>
         <tr>
           <td height="25">&nbsp;</td>
@@ -123,133 +126,52 @@ include "inc_topo.php";
         <tr>
           <td height="24"></td>
           <td><a href="Senha/lembrar_senha.php" class="style5">Esqueceu a senha?</a></td>
-          <td width="20">&nbsp;</td>
-          <td width="1" valign="top"><label for="Submit"></label></td>
+          <td>&nbsp;</td>
+          <td valign="top"><label for="Submit"></label></td>
         </tr>
         <tr>
           <td height="23"></td>
-          <td valign="middle"><a href="cadastro.php" class="style3"> </a>
-             
-<?php
-			  // faz consulta no banco
-$consulta = mysql_query("select * from dados_usuarios where Login = '$login_usuario'");
+          <td valign="middle"><a href="cadastro.php" class="style3"> </a><?php
 while($linha = mysql_fetch_object($consulta)) {
-	echo "<b>Ol&aacute; ".$linha->Login."!</b>";
+	echo "<b>Olá ".$linha->Login."!</b>";
 }
 ?>
-              <br>
-            <a href="logout.php" class="style3">Logout</a> </td>
+<br>
+<a href="logout.php" class="style3">Logout</a>
+ </td>
           <td>&nbsp;</td>
           <td colspan="2" valign="middle"><a href="Senha/lembrar_senha.php" class="style3"></a> </td>
         </tr>
+      
       </table>
-    </form>    
+    </form>    </td>
+    <td valign="top"><div align="left">
       <table width="100%" border="0">
         <tr>
-          <td valign="top"><div align="left"> <img src="images/bt_categoria.jpg" alt="" width="160" height="35" align="top" /> <br>
-            <p class="style6">>Animes </a> <br />
-              >Camisetas </a> <br />
-              >Mang&aacute;s </a> <br />
-              >Seriados </p>
+          <td width="34%"><img src="images/ace01.jpg" width="190" height="190"></td>
+          <td width="66%"><img src="images/ace02.jpg" width="190" height="190"></td>
+          <td width="66%"><img src="images/ace03.jpg" width="190" height="190"></td>
+        </tr>
+        <tr>
+          <td valign="top"><h2 class="style16">Capa Silicone para Nokia E71</h2>
+            <div class="style16">R$20,00</div>
+            <h2 align="left" class="style18">&nbsp;</h2>
+            <div>
+            <br></td>
+          <td valign="top" class="style16"><h2><span class="style18">Hub USB e Aquecedor de Caf&eacute;</span></h2>
+            <div class="style18"><span id="product-price-1051">R$22,50</span></div></td>
+          <td valign="top"><div align="left">
+            <h2 class="style18">Mini Controle Remoto Espi&atilde;o Universal</h2>
+            <div class="style18">R$19,50</div>
           </div></td>
         </tr>
       </table>
-    <br>
-    <table width="100%" border="0">
-      <tr>
-        <td valign="top"><div align="left"><img src="images/dn.jpg" width="158" height="642" alt="" /></div></td>
-      </tr>
-    </table></td>
-    <td valign="top"><div align="left">  
-	
-	<form name="formcombo" action="Acessorios.php" method="get" enctype="multipart/form-data">
-      <div align="center">
-  <select name="valor">
-    <option value="" selected="selected">selecione uma opção</option>
-    <option value="menor">Menor valor</option>
-    <option value="maior">Maior valor</option>
-    <option value="nome">Por nome</option>
-  </select>
-  &nbsp;&nbsp;&nbsp;
-        <input type="submit" name="botao" value="Filtrar"/>
-          </div>
-	</form>
-  
-    <table width="100%" border="0">
-      <tr>
-        <td><?php
-
-  
-  $conexao = mysql_connect('localhost', 'root', '') or die('Erro ao conectar');
-  mysql_select_db('densetsu', $conexao) or die('Erro ao selecionar');
-
-
-//ordenação
-
-
-$valor= @$_GET['valor'];
-
-switch(@$valor){
-	case 'menor';
-		$string='order by valor asc';
-		$msg="Menor Valor";
-	break;
-	case 'maior';
-		$string='order by valor desc';
-		$msg="Maior Valor";
-	break;
-		case 'nome';
-		$string='order by nome asc';
-		$msg="Por nome";
-	break;
-	default;
-		$string="";
-		$msg="";
-	break;
-}
-
-
-  $sql = "SELECT nome, extensao,descricao,valor FROM produtos ".$string;
-  $imagem = "images/";
-  $resultado = mysql_query($sql) or die(mysql_error());
-  if(mysql_num_rows($resultado) > 0){
-      print '<table border=1 width="100%">';
-      while($linha = mysql_fetch_array($resultado)) {
-          print '<tr>';
-		  		//primeira coluna
-			   print '<td width="35%">'; print '<div align="center">'; print "<img src='".$imagem.$linha['nome'].".".$linha['extensao']."' alt='".$linha['descricao']."' width='100px' height='80px'>"; print '</br>';
-			   print $linha['descricao']; print '</br>';
-			    print 'R$:'; print $linha['valor']; print'</div>'; print '</td>';
-		   		//segunda coluna
-			   print '<td width="35%">'; print '<div align="center">'; print "<img src='".$imagem.$linha['nome'].".".$linha['extensao']."' alt='".$linha['descricao']."' width='100px' height='80px'>"; 
-			   print $linha['descricao']; 
-			   print $linha['valor'];  print'</div>';  print '</td>';
-		   //terceira coluna
-			   print '<td width="30%">'; print '<div align="center">'; print "<img src='".$imagem.$linha['nome'].".".$linha['extensao']."' alt='".$linha['descricao']."' width='100px' height='80px'>"; 
-			   print $linha['descricao']; 
-			   print $linha['valor'];  print'</div>';  print '</td>';
-		  print '</tr>';
-			/*print '<tr>';
-          print '<td>'; print $linha['quantidade_estoque']; print '</td>';
-		    print '</tr>';*/
-				/*print '<tr>';
-		  print '<td>'; print $linha['data_entrega']; print '</td>';
-          print '</tr>';*/
-      }
-      print '</table>';
-  } else {
-      print $sql;
-      //outro comando
-  }
-?></td>
-      </tr>
-    </table>
     </div></td>
     <td valign="top">
 	  <div align="right"><span class="style2">Vot</span><span class="style22">e no m</span><span class="style2">elhor anime!&nbsp;&nbsp; </span>
 	    <table width="100%" border="0">
 	      <tr>
-	        <td height="198"><div align="right">
+	        <td><div align="right">
 	          <form>
 	            <left>
 	              <div align="left">
@@ -272,22 +194,64 @@ switch(@$valor){
             </div></td>
           </tr>
         </table>
-        <br>
-	  </div>
-	  <table width="100%" height="187" border="0">
-        <tr>
-          <td valign="top"><div align="right"><img src="images/bt-carrinho.jpg" width="160" height="35" align="top"><br>
-            <br>
-            <img src="images/carrrinho.jpg" width="140" height="93"><br>
-          </div></td>
-        </tr>
-      </table>
-      <table width="100%" border="0">
-        <tr>
-          <td valign="top"><div align="right"><img src="images/nah.jpg" width="158" height="640" alt="" /></div></td>
-        </tr>
-      </table>
-    <p>&nbsp;</p></td>
+        <a href="cadastro.php" class="style3">
+
+      </a></div></td>
+  </tr>
+</table>
+<table width="1000" border="0">
+  <tr>
+    <td width="185" valign="top"><div align="left"><img src="images/bt_categoria.jpg" alt="" width="160" height="35" align="top" /> <br>
+    </div>
+      <p class="style6">>Animes </a> <br />
+>Camisetas </a> <br />
+>Mang&aacute;s </a> <br />
+>Seriados </p>
+    <p></a></p></td>
+    <td width="623"><div align="center"><?php
+
+  $produto =  $_REQUEST['descricao'];
+  $conexao = mysql_connect('localhost', 'root', '') or die('Erro ao conectar');
+  mysql_select_db('densetsu', $conexao) or die('Erro ao selecionar');
+
+  $sql = "       SELECT nome, descricao, valor FROM produtos
+              
+                 WHERE produtos.descricao LIKE  '%".$produto."%' ";
+  $resultado = mysql_query($sql) or die(mysql_error());
+  if(mysql_num_rows($resultado) > 0){
+      print '<table width="150" height="0" border="0" align="center">';
+      while($linha = mysql_fetch_array($resultado)) {
+          print '<tr>';
+          print '<td>'; print $linha['nome']; print '</td>';
+			print '</tr>';
+				print '<tr>';
+          print '<td>'; print $linha['descricao']; print '</td>';
+				print '</tr>';
+					print '<tr>';
+		  print '<td>'; print $linha['valor']; print '</td>';
+          			print '</tr>';
+      }
+      print '</table>';
+  } else {
+      print $sql;
+      //outro comando
+  }
+?></div>
+      <div align="center"><br>
+    </div></td>
+    <td width="178" valign="top"><div align="right"><img src="images/bt-carrinho.jpg" width="160" height="35" align="top"><br>
+      <br>
+      <img src="images/carrrinho.jpg" width="140" height="93"><br>
+      <br>
+      <br>
+      <br>
+    </div></td>
+  </tr>
+</table>
+<table width="1000" border="0">
+  <tr>
+    <td>
+</td>
   </tr>
 </table>
 <table width="1000" height="113" border="0">
